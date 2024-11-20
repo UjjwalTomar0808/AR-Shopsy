@@ -4,10 +4,11 @@
   --text: #000;
 }
 .t{
-  margin: 1rem;
+  margin: 0.5rem;
 }
 .z{
   z-index: 999;
+  margin-top: -2rem;
 }
 header {
   align-items: center;
@@ -51,8 +52,8 @@ nav .navtop {
 
 nav .navtop h1{
   font-weight: 600;
-  font-size: 3rem;
-  margin: 0;
+  font-size: 2rem;
+  margin-top: 3rem;
 }
 
 .desktop-nav {
@@ -125,6 +126,7 @@ nav .project-title:hover {
 .mobile-menu-icon div {
   background: var(--text);
   border-radius: 0.5rem;
+  margin: 0 1.5rem;
   height: 3px;
   transition: transform 0.3s ease;
   width: 2rem;
@@ -140,6 +142,11 @@ nav .project-title:hover {
 
 /* Media Query for small screens */
 @media screen and (max-width: 768px) {
+  nav .navtop h1{
+    font-weight: 600;
+    font-size: 2rem;
+    margin: 1rem;
+  }
 
   header {
     padding: 0.5rem;
@@ -194,7 +201,7 @@ nav .project-title:hover {
     display: block;
     text-decoration: none;
     color: var(--Bg);
-    margin-bottom: 20%; /* Add margin between the links */
+    margin-bottom: 2%; /* Add margin between the links */
   }
 }
 
