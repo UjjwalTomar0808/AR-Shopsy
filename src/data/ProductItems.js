@@ -12,6 +12,10 @@ import pot from "../assets/models/pot.glb";
 import potUsdz from "../assets/models/pot.usdz";
 import cloths from "../assets/models/cloths.glb";
 import clothsUsdz from "../assets/models/cloths.usdz";
+import character from "../assets/models/character.glb";
+import characterUsdz from "../assets/models/Character.usdz";
+import vase from "../assets/models/vase.glb";
+import vaseUsdz from "../assets/models/Vase.usdz";
 
 const productItems = [
   {
@@ -21,6 +25,8 @@ const productItems = [
     iOSSrc: ioschair,
     category: "Furniture",
     color: "Orange",
+    price: 8000, // Add price here
+    rating: 4, // Add rating here
     annotations: [
       {
         title: "comfortable-back",
@@ -46,6 +52,8 @@ const productItems = [
     iOSSrc: OfficeChairUsdz,
     category: "Furniture",
     color: "black",
+    price: 6000, // Add price here
+    rating: 3, // Add rating here
     annotations: [
       {
         title: "comfortable-back",
@@ -71,6 +79,8 @@ const productItems = [
     iOSSrc: potUsdz,
     category: "Environment",
     color: "Red",
+    price: 5000, 
+    rating: 4, 
     annotations: [
       {
         title: "pot-structure",
@@ -89,6 +99,8 @@ const productItems = [
     iOSSrc: iospainting,
     category: "Art",
     color: "Brown",
+    price: 100000, 
+    rating: 5, 
     annotations: [
       {
         title: "wooden-frame",
@@ -114,6 +126,8 @@ const productItems = [
     iOSSrc: ioscar,
     category: "Vehicle",
     color: "Blue",
+    price: 250000000, 
+    rating: 5, 
     annotations: [
       {
         title: "plastic-structure",
@@ -139,6 +153,8 @@ const productItems = [
     iOSSrc: ioscar1,
     category: "Vehicle",
     color: "Red",
+    price: 20500000, 
+    rating: 4, 
     annotations: [
       {
         title: "plastic-structure",
@@ -158,12 +174,14 @@ const productItems = [
     ]
   },
   {
-    id: 1,
+    id: 7,
     name: "Cloth",
     modelSrc: cloths,
     iOSSrc: clothsUsdz,
     category: "Cloth",
     color: "Orange",
+    price: 2000, 
+    rating: 2, 
     annotations: [
       {
         title: "best-fabric",
@@ -182,5 +200,62 @@ const productItems = [
       },
     ]
   },
+  {
+    id: 8,
+    name: "Character",
+    modelSrc: character,
+    iOSSrc: characterUsdz,
+    category: "Character",
+    color: "Green",
+    price: 500, 
+    rating: 1, 
+    annotations: [
+      {
+        title: "character-head",
+        slot: "hotspot-1",
+        position: "0.011597651675006926m 0.5744572599492905m -0.1383899854988515m",
+        normal: "0.028332494851243895m 0.2137467602998606m 0.9764781575625839m",
+        orbit: "10.89188deg 119.9775deg 0.03543022m",
+        target: "-0.1053838m 0.01610652m 0.1076345m"
+      },
+      {
+        title: "character-body",
+        slot: "hotspot-2",
+        position: "0.008754174027053235m 0.3513235856998005m 0.1658749505478343m",
+        normal: "-0.30988561688489596m 0.9507625837296717m -0.004627507703580716m",
+        orbit: "10.89188deg 119.9775deg 0.03543022m",
+        target: "-0.1053838m 0.01610652m 0.1076345m"
+      },
+    ]
+  },
+  {
+    id: 9,
+    name: "Vase",
+    modelSrc: vase,
+    iOSSrc: vaseUsdz,
+    category: "Art",
+    color: "Purple",
+    price: 200, 
+    rating: 3, 
+    annotations: [
+      {
+        title: "vase-body",
+        slot: "hotspot-1",
+        position: "0.011597651675006926m 0.5744572599492905m -0.1383899854988515m",
+        normal: "0.028332494851243895m 0.2137467602998606m 0.9764781575625839m",
+        orbit: "10.89188deg 119.9775deg 0.03543022m",
+        target: "-0.1053838m 0.01610652m 0.1076345m"
+      },
+      {
+        title: "vase-decoration",
+        slot: "hotspot-2",
+        position: "0.008754174027053235m 0.3513235856998005m 0.1658749505478343m",
+        normal: "-0.30988561688489596m 0.9507625837296717m -0.004627507703580716m",
+        orbit: "10.89188deg 119.9775deg 0.03543022m",
+        target: "-0.1053838m 0.01610652m 0.1076345m"
+      },
+    ]
+  },
+
 ];
 export default productItems;

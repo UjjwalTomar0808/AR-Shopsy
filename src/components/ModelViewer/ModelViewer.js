@@ -3,13 +3,13 @@ import LazyLoad from "react-lazyload";
 // import "../../Products/ProductList.css";
 import QRCode from "qrcode.react";
 import Help from "./Help";
+
 const ModelViewer = ({ item, addToWishlist, removeFromWishlist, wishlist }) => {
   const [selectedVariant, setSelectedVariant] = useState('default');
   const [display, setDisplay] = useState(false);
   const [ARSupported, setARSupported] = useState(false);
   const [annotate, setAnnotate] = useState(false);
   const [isInWishlist, setIsInWishlist] = useState(false);
-  
   
   let modelViewer1 = {
     backgroundColor: " #ecf0f3",
@@ -19,28 +19,23 @@ const ModelViewer = ({ item, addToWishlist, removeFromWishlist, wishlist }) => {
     height: ARSupported ? "85%" : "75%",
     borderRadius: 15,
   };
-  
-  // Accessing product for full screen start
-  const model = useRef();
 
-  // Accessing varient selections element
+  const model = useRef();
   const varient = useRef(null);
 
-  console.log(item)
+  console.log(item);
 
   function toggle() {
     if (!document.fullscreenElement) {
       model.current.requestFullscreen();
     } else if (document.exitFullscreen) document.exitFullscreen();
   }
-  // Full screen code end
-
 
   const handleAnnotateClick = (annotation) => {
     const { orbit, target, position } = annotation;
     model.current.cameraTarget = position;
-    model.current.orbit = target
-  }
+    model.current.orbit = target;
+  };
 
   useEffect(() => {
     if (
@@ -57,44 +52,41 @@ const ModelViewer = ({ item, addToWishlist, removeFromWishlist, wishlist }) => {
   }, []);
 
   useEffect(() => {
-    // set up event listeners
-    const modelViewer = model.current
+    const modelViewer = model.current;
     modelViewer &&
-    modelViewer.addEventListener('load', () => {
-      console.log('loaded')
-      const availableVariants = modelViewer?.availableVariants;
-      console.log(availableVariants)
-      for (const variant of availableVariants) {
-        const option = document.createElement('option');
-        option.value = variant;
-        option.textContent = variant;
-        varient?.current?.appendChild(option);
-      }
+      modelViewer.addEventListener('load', () => {
+        console.log('loaded');
+        const availableVariants = modelViewer?.availableVariants;
+        console.log(availableVariants);
+        for (const variant of availableVariants) {
+          const option = document.createElement('option');
+          option.value = variant;
+          option.textContent = variant;
+          varient?.current?.appendChild(option);
+        }
 
-      // Adding a default option
-      const defaultOption = document.createElement('option');
-      defaultOption.value = 'Default';
-      defaultOption.textContent = 'Default';
-      varient?.current?.appendChild(defaultOption);
-    });
+        const defaultOption = document.createElement('option');
+        defaultOption.value = 'Default';
+        defaultOption.textContent = 'Default';
+        varient?.current?.appendChild(defaultOption);
+      });
 
     varient?.current?.addEventListener('input', (event) => {
       modelViewer.variantName = event.target.value === 'Default' ? null : event.target.value;
     });
   }, []);
-   
+
   useEffect(() => {
-    if(wishlist){
-    const isInWishlist = wishlist.some((wishlistItem) => wishlistItem.id === item.id);
-    setIsInWishlist(isInWishlist);
+    if (wishlist) {
+      const isInWishlist = wishlist.some((wishlistItem) => wishlistItem.id === item.id);
+      setIsInWishlist(isInWishlist);
     }
   }, [item, wishlist]);
+
   const handleAddToWishlist = () => {
     if (isInWishlist) {
       removeFromWishlist(item.id);
-    } 
-    else 
-    {
+    } else {
       addToWishlist(item);
     }
   };
@@ -112,9 +104,7 @@ const ModelViewer = ({ item, addToWishlist, removeFromWishlist, wishlist }) => {
         ar-modes="webxr scene-viewer quick-look"
         camera-controls
         auto-rotate
-
       >
-
         {ARSupported && (
           <button slot="ar-button" className="arbutton">
             View in your space
@@ -135,13 +125,11 @@ const ModelViewer = ({ item, addToWishlist, removeFromWishlist, wishlist }) => {
             <Help />
           </>
         ) : (
-          <>
-            <button className="help-btn" onClick={() => setDisplay(true)}>
-              ?<span>help</span>
-            </button>
-          </>
+          <button className="help-btn" onClick={() => setDisplay(true)}>
+            ?<span>help</span>
+          </button>
         )}
-        
+
         <button className="annotate-btn" onClick={() => setAnnotate((prevState) => !prevState)}>
           i
         </button>
@@ -161,15 +149,13 @@ const ModelViewer = ({ item, addToWishlist, removeFromWishlist, wishlist }) => {
             <div class="HotspotAnnotation">{annotate.title}</div>
           </button>
         ))}
-        
+
         <div class="controls variant_div">
           <select ref={varient} id="variant"></select>
         </div>
-
       </model-viewer>
-        
+
       <LazyLoad>
-        {/* Card content below the model-viewer */}
         <div className="qr-sec">
           {!ARSupported && (
             <QRCode
@@ -189,24 +175,35 @@ const ModelViewer = ({ item, addToWishlist, removeFromWishlist, wishlist }) => {
               <div className="rating-sec">
                 <div>Rating</div>
                 <div>
-                  <span className="star">&#9733;</span>
-                  <span className="star">&#9733;</span>
-                  <span className="star">&#9733;</span>
-                  <span>&#9733;</span>
-                  <span>&#9733;</span>
+                  {[...Array(5)].map((_, idx) => {
+                    const isFilled = idx < Math.floor(item.rating); // Full stars
+                    const isHalfFilled = idx === Math.floor(item.rating) && item.rating % 1 !== 0; // Half star
+
+                    return (
+                      <span
+                        key={idx}
+                        className={`star ${isFilled ? 'active' : ''} ${isHalfFilled ? 'half-active' : ''}`}
+                      >
+                        &#9733;
+                      </span>
+                    );
+                  })}
                 </div>
               </div>
-              <div>Rs. 1000</div>
+              <div>Rs. {item.price}</div>
               {!ARSupported && <h5>Scan the QR code for AR View on mobile</h5>}
             </div>
             <button className="add-icon" onClick={handleAddToWishlist}>
               {isInWishlist ? '-' : '+'}
             </button>
           </div>
+
+
         </div>
       </LazyLoad>
     </div>
   );
 };
+
 
 export default ModelViewer;
