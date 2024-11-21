@@ -173,7 +173,7 @@ const ModelViewer = ({ item, addToWishlist, removeFromWishlist, wishlist }) => {
             <div>
               <div className="pname">{item.name}</div>
               <div className="rating-sec">
-                <div>Rating</div>
+                <div className="rating-text">Rating</div>
                 <div>
                   {[...Array(5)].map((_, idx) => {
                     const isFilled = idx < Math.floor(item.rating); // Full stars

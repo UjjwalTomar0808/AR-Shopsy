@@ -15,6 +15,10 @@
     padding-top: 5rem;
   }
 }
+.rating-text{
+  margin: 0 1%;
+  font-size: large;
+}
 
 .star {
   font-size: 18px;
@@ -35,7 +39,7 @@
   position: absolute;
   width: 50%;
   left: 0;
-  top: 0;
+  top: 0%;
   color: #ccc; /* Empty half-star color */
   clip-path: inset(0 50% 0 0); /* Mask the right half of the star */
 }

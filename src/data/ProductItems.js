@@ -16,6 +16,12 @@ import character from "../assets/models/character.glb";
 import characterUsdz from "../assets/models/Character.usdz";
 import vase from "../assets/models/vase.glb";
 import vaseUsdz from "../assets/models/Vase.usdz";
+import window_and_curtains from "../assets/models/window_and_curtains.glb";
+import window_and_curtainsUsdz from "../assets/models/Window_and_Curtains.usdz";
+import window__wooden from "../assets/models/window__wooden.glb";
+import window__woodenUsdz from "../assets/models/Window__Wooden.usdz";
+import window from "../assets/models/window.glb";
+import windowUsdz from "../assets/models/WINDOW.usdz";
 
 const productItems = [
   {
@@ -175,7 +181,7 @@ const productItems = [
   },
   {
     id: 7,
-    name: "Cloth",
+    name: "Female-Cloth",
     modelSrc: cloths,
     iOSSrc: clothsUsdz,
     category: "Cloth",
@@ -202,10 +208,10 @@ const productItems = [
   },
   {
     id: 8,
-    name: "Character",
+    name: "Male-Cloth",
     modelSrc: character,
     iOSSrc: characterUsdz,
-    category: "Character",
+    category: "Cloth",
     color: "Green",
     price: 500, 
     rating: 1, 
@@ -251,6 +257,66 @@ const productItems = [
         slot: "hotspot-2",
         position: "0.008754174027053235m 0.3513235856998005m 0.1658749505478343m",
         normal: "-0.30988561688489596m 0.9507625837296717m -0.004627507703580716m",
+        orbit: "10.89188deg 119.9775deg 0.03543022m",
+        target: "-0.1053838m 0.01610652m 0.1076345m"
+      },
+    ]
+  },
+  {
+    id: 10,
+    name: "Window and Curtains",
+    modelSrc: window_and_curtains,
+    iOSSrc: window_and_curtainsUsdz,
+    category: "Furniture",
+    color: "White",
+    price: 15000,
+    rating: 4,
+    annotations: [
+      {
+        title: "curtain-material",
+        slot: "hotspot-1",
+        position: "0.011597651675006926m 0.5744572599492905m -0.1383899854988515m",
+        normal: "0.028332494851243895m 0.2137467602998606m 0.9764781575625839m",
+        orbit: "10.89188deg 119.9775deg 0.03543022m",
+        target: "-0.1053838m 0.01610652m 0.1076345m"
+      },
+    ]
+  },
+  {
+    id: 11,
+    name: "Wooden Window",
+    modelSrc: window__wooden,
+    iOSSrc: window__woodenUsdz,
+    category: "Furniture",
+    color: "Brown",
+    price: 7000,
+    rating: 3,
+    annotations: [
+      {
+        title: "wooden-frame",
+        slot: "hotspot-1",
+        position: "0.011597651675006926m 0.5744572599492905m -0.1383899854988515m",
+        normal: "0.028332494851243895m 0.2137467602998606m 0.9764781575625839m",
+        orbit: "10.89188deg 119.9775deg 0.03543022m",
+        target: "-0.1053838m 0.01610652m 0.1076345m"
+      },
+    ]
+  },
+  {
+    id: 12,
+    name: "Window",
+    modelSrc: window,
+    iOSSrc: windowUsdz,
+    category: "Furniture",
+    color: "Gray",
+    price: 10000,
+    rating: 4,
+    annotations: [
+      {
+        title: "glass-material",
+        slot: "hotspot-1",
+        position: "0.011597651675006926m 0.5744572599492905m -0.1383899854988515m",
+        normal: "0.028332494851243895m 0.2137467602998606m 0.9764781575625839m",
         orbit: "10.89188deg 119.9775deg 0.03543022m",
         target: "-0.1053838m 0.01610652m 0.1076345m"
       },
