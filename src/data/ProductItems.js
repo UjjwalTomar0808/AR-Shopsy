@@ -21,7 +21,29 @@ import vaseUsdz from "../assets/models/Vase.usdz";
 import window__wooden from "../assets/models/window__wooden.glb";
 import window__woodenUsdz from "../assets/models/Window__Wooden.usdz";
 import window from "../assets/models/window.glb";
-import windowUsdz from "../assets/models/WINDOW.usdz";
+import windowUsdz from "../assets/models/WINDOW.usdz"; 
+import air_jordan_1 from "../assets/models/air_jordan_1.glb";
+import air_jordan_1Usdz from "../assets/models/Air_Jordan_1.usdz"; 
+import cowboy_hat from "../assets/models/cowboy_hat.glb";
+import cowboy_hatUsdz from "../assets/models/Cowboy_Hat.usdz"; 
+import glasses from "../assets/models/glasses.glb";
+import glassesUsdz from "../assets/models/Glasses.usdz"; 
+import jordan_shoes from "../assets/models/jordan_shoes.glb";
+import jordan_shoesUsdz from "../assets/models/Jordan_shoes.usdz"; 
+import leather_shoes from "../assets/models/leather_shoes.glb";
+import leather_shoesUsdz from "../assets/models/Leather_shoes.usdz"; 
+import men_2023_free_3d_model from "../assets/models/men_2023_free_3d_model.glb";
+import men_2023_free_3d_modelUsdz from "../assets/models/Men_2023_free_3d_model.usdz"; 
+import mens_caro_flannel_shirt from "../assets/models/mens_caro_flannel_shirt.glb";
+import mens_caro_flannel_shirtUsdz from "../assets/models/mens_caro_flannel_shirt.usdz"; 
+import mens_casual_shirt from "../assets/models/mens_casual_shirt.glb";
+// import mens_casual_shirtUsdz from "../assets/models/Mens_casual_Shirt.usdz"; 
+import mens_jacket from "../assets/models/mens_jacket.glb";
+import mens_jacketUsdz from "../assets/models/Mens_Jacket.usdz"; 
+import stool_flower_pot from "../assets/models/stool_flower_pot.glb";
+import stool_flower_potUsdz from "../assets/models/Stool_Flower_Pot.usdz"; 
+import sun_glasses from "../assets/models/sun_glasses.glb";
+import sun_glassesUsdz from "../assets/models/Sun_Glasses.usdz"; 
 
 const productItems = [
   {
@@ -322,6 +344,226 @@ const productItems = [
       },
     ]
   },
+  {
+    id: 13,
+    name: "Air Jordan 1",
+    modelSrc: air_jordan_1,
+    iOSSrc: air_jordan_1Usdz,
+    category: "Footwear",
+    color: "Red/White",
+    price: 15000,
+    rating: 5,
+    annotations: [
+      {
+        title: "premium-leather",
+        slot: "hotspot-1",
+        position: "0.011597651675006926m 0.5744572599492905m -0.1383899854988515m",
+        normal: "0.028332494851243895m 0.2137467602998606m 0.9764781575625839m",
+        orbit: "10.89188deg 119.9775deg 0.03543022m",
+        target: "-0.1053838m 0.01610652m 0.1076345m"
+      }
+    ]
+  },
+  {
+    id: 14,
+    name: "Cowboy Hat",
+    modelSrc: cowboy_hat,
+    iOSSrc: cowboy_hatUsdz,
+    category: "Accessories",
+    color: "Brown",
+    price: 3000,
+    rating: 4,
+    annotations: [
+      {
+        title: "material-detail",
+        slot: "hotspot-1",
+        position: "0.011597651675006926m 0.5744572599492905m -0.1383899854988515m",
+        normal: "0.028332494851243895m 0.2137467602998606m 0.9764781575625839m",
+        orbit: "10.89188deg 119.9775deg 0.03543022m",
+        target: "-0.1053838m 0.01610652m 0.1076345m"
+      }
+    ]
+  },
+  {
+    id: 15,
+    name: "Glasses",
+    modelSrc: glasses,
+    iOSSrc: glassesUsdz,
+    category: "Accessories",
+    color: "Black",
+    price: 2500,
+    rating: 4,
+    annotations: [
+      {
+        title: "frame-style",
+        slot: "hotspot-1",
+        position: "0.011597651675006926m 0.5744572599492905m -0.1383899854988515m",
+        normal: "0.028332494851243895m 0.2137467602998606m 0.9764781575625839m",
+        orbit: "10.89188deg 119.9775deg 0.03543022m",
+        target: "-0.1053838m 0.01610652m 0.1076345m"
+      }
+    ]
+  },
+  {
+    id: 16,
+    name: "Jordan Shoes",
+    modelSrc: jordan_shoes,
+    iOSSrc: jordan_shoesUsdz,
+    category: "Footwear",
+    color: "White/Red",
+    price: 12000,
+    rating: 5,
+    annotations: [
+      {
+        title: "comfortable-sole",
+        slot: "hotspot-1",
+        position: "0.011597651675006926m 0.5744572599492905m -0.1383899854988515m",
+        normal: "0.028332494851243895m 0.2137467602998606m 0.9764781575625839m",
+        orbit: "10.89188deg 119.9775deg 0.03543022m",
+        target: "-0.1053838m 0.01610652m 0.1076345m"
+      }
+    ]
+  },
+  {
+    id: 17,
+    name: "Leather Shoes",
+    modelSrc: leather_shoes,
+    iOSSrc: leather_shoesUsdz,
+    category: "Footwear",
+    color: "Brown",
+    price: 8000,
+    rating: 5,
+    annotations: [
+      {
+        title: "leather-quality",
+        slot: "hotspot-1",
+        position: "0.011597651675006926m 0.5744572599492905m -0.1383899854988515m",
+        normal: "0.028332494851243895m 0.2137467602998606m 0.9764781575625839m",
+        orbit: "10.89188deg 119.9775deg 0.03543022m",
+        target: "-0.1053838m 0.01610652m 0.1076345m"
+      }
+    ]
+  },
+  {
+    id: 18,
+    name: "Men's 2023 Free 3D Model",
+    modelSrc: men_2023_free_3d_model,
+    iOSSrc: men_2023_free_3d_modelUsdz,
+    category: "Clothing",
+    color: "Mixed",
+    price: 12000,
+    rating: 5,
+    annotations: [
+      {
+        title: "detailed-fabric",
+        slot: "hotspot-1",
+        position: "0.011597651675006926m 0.5744572599492905m -0.1383899854988515m",
+        normal: "0.028332494851243895m 0.2137467602998606m 0.9764781575625839m",
+        orbit: "10.89188deg 119.9775deg 0.03543022m",
+        target: "-0.1053838m 0.01610652m 0.1076345m"
+      }
+    ]
+  },
+  {
+    id: 19,
+    name: "Men's Caro Flannel Shirt",
+    modelSrc: mens_caro_flannel_shirt,
+    iOSSrc: mens_caro_flannel_shirtUsdz,
+    category: "Clothing",
+    color: "Plaid",
+    price: 3000,
+    rating: 4,
+    annotations: [
+      {
+        title: "fabric-texture",
+        slot: "hotspot-1",
+        position: "0.011597651675006926m 0.5744572599492905m -0.1383899854988515m",
+        normal: "0.028332494851243895m 0.2137467602998606m 0.9764781575625839m",
+        orbit: "10.89188deg 119.9775deg 0.03543022m",
+        target: "-0.1053838m 0.01610652m 0.1076345m"
+      }
+    ]
+  },
+  {
+    id: 20,
+    name: "Men's Casual Shirt",
+    modelSrc: mens_casual_shirt,
+    // iOSSrc: mens_casual_shirtUsdz,
+    category: "Clothing",
+    color: "Blue",
+    price: 4000,
+    rating: 4,
+    annotations: [
+      {
+        title: "comfort-fit",
+        slot: "hotspot-1",
+        position: "0.011597651675006926m 0.5744572599492905m -0.1383899854988515m",
+        normal: "0.028332494851243895m 0.2137467602998606m 0.9764781575625839m",
+        orbit: "10.89188deg 119.9775deg 0.03543022m",
+        target: "-0.1053838m 0.01610652m 0.1076345m"
+      }
+    ]
+  },
+  {
+    id: 21,
+    name: "Men's Jacket",
+    modelSrc: mens_jacket,
+    iOSSrc: mens_jacketUsdz,
+    category: "Clothing",
+    color: "Black",
+    price: 8000,
+    rating: 5,
+    annotations: [
+      {
+        title: "premium-fabric",
+        slot: "hotspot-1",
+        position: "0.011597651675006926m 0.5744572599492905m -0.1383899854988515m",
+        normal: "0.028332494851243895m 0.2137467602998606m 0.9764781575625839m",
+        orbit: "10.89188deg 119.9775deg 0.03543022m",
+        target: "-0.1053838m 0.01610652m 0.1076345m"
+      }
+    ]
+  },
+  {
+    id: 22,
+    name: "Stool Flower Pot",
+    modelSrc: stool_flower_pot,
+    iOSSrc: stool_flower_potUsdz,
+    category: "Environment",
+    color: "Grey",
+    price: 5000,
+    rating: 4,
+    annotations: [
+      {
+        title: "unique-design",
+        slot: "hotspot-1",
+        position: "0.011597651675006926m 0.5744572599492905m -0.1383899854988515m",
+        normal: "0.028332494851243895m 0.2137467602998606m 0.9764781575625839m",
+        orbit: "10.89188deg 119.9775deg 0.03543022m",
+        target: "-0.1053838m 0.01610652m 0.1076345m"
+      }
+    ]
+  },
+  {
+    id: 23,
+    name: "Sunglasses",
+    modelSrc: sun_glasses,
+    iOSSrc: sun_glassesUsdz,
+    category: "Accessories",
+    color: "Black",
+    price: 2500,
+    rating: 4,
+    annotations: [
+      {
+        title: "frame-design",
+        slot: "hotspot-1",
+        position: "0.011597651675006926m 0.5744572599492905m -0.1383899854988515m",
+        normal: "0.028332494851243895m 0.2137467602998606m 0.9764781575625839m",
+        orbit: "10.89188deg 119.9775deg 0.03543022m",
+        target: "-0.1053838m 0.01610652m 0.1076345m"
+      }
+    ]
+  }
 
 ];
 export default productItems;
